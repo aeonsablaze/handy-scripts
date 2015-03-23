@@ -7,8 +7,11 @@
 
 
 # Verify that only one parameter is provided.
-if [ $# -ne 1 ]; 
-    then echo "illegal number of parameters"
+if [ $# -gt 1 ]; 
+    then echo "Illegal number of parameters provided"
+    exit
+elif [ $# -eq 0 ];
+    then echo "Usage: asky [filename]"
     exit
 fi
 
